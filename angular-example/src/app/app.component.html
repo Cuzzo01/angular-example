@@ -1,0 +1,26 @@
+<div>
+  <h3>Coffee Stuff</h3>
+  <button (click)="getCoffee()">Get Random Coffee</button>
+  <div *ngIf="hasCoffee">
+    <div>ID: {{ coffee.id }}</div>
+    <div>Blend Name: {{ coffee.blend_name }}</div>
+    <div>Origin: {{ coffee.origin }}</div>
+    <div>Variety: {{ coffee.variety }}</div>
+    <div>Notes: {{ coffee.notes }}</div>
+  </div>
+  <div>
+    <h3>Post Stuff</h3>
+    <button (click)="getPostList()">Get All Posts</button>
+    <div>
+      <input #specificPost (keyup.enter)="getSpecificPost(specificPost.value)" />
+    </div>
+    <div *ngIf="hasPosts">
+      <div *ngFor="let post of postList">
+        <div>ID: {{ post.id }}</div>
+        <div>UserID: {{ post.userId }}</div>
+        <div>Title: {{ post.title }}</div>
+        <div>Body: {{ post.body }}</div>
+      </div>
+    </div>
+  </div>
+</div>
