@@ -16,4 +16,13 @@ export class CoffeeService {
       .toPromise()
       .then(coffee => coffee ?? <Coffee>{});
   }
+
+  async saveNewCoffee(newCoffee: Coffee) {
+    const endpoint = 'https://random-data-api.com/api/coffee/random_coffee';
+
+    return await this.httpClient
+      .post(endpoint, newCoffee)
+      .toPromise()
+      .then(coffee => coffee ?? <Coffee>{});
+  }
 }

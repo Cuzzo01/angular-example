@@ -1,12 +1,14 @@
 <div>
-  <h3>Coffee Stuff</h3>
-  <button (click)="getCoffee()">Get Random Coffee</button>
-  <div *ngIf="hasCoffee">
-    <div>ID: {{ coffee.id }}</div>
-    <div>Blend Name: {{ coffee.blend_name }}</div>
-    <div>Origin: {{ coffee.origin }}</div>
-    <div>Variety: {{ coffee.variety }}</div>
-    <div>Notes: {{ coffee.notes }}</div>
+  <div>
+    <h3>Coffee Stuff</h3>
+    <button (click)="getCoffee()">Get Random Coffee</button>
+    <div *ngIf="hasCoffee">
+      <div>ID: {{ coffee.id }}</div>
+      <div>Blend Name: {{ coffee.blend_name }}</div>
+      <div>Origin: {{ coffee.origin }}</div>
+      <div>Variety: {{ coffee.variety }}</div>
+      <div>Notes: {{ coffee.notes }}</div>
+    </div>
   </div>
   <div>
     <h3>Post Stuff</h3>
